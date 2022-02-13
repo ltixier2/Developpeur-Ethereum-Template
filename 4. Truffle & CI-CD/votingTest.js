@@ -7,9 +7,12 @@ const { array } = require('yargs');
 const expectEvent = require('@openzeppelin/test-helpers/src/expectEvent');
 const expectRevert = require('@openzeppelin/test-helpers/src/expectRevert');
 /*
-const { expect } = require('chai');
- * uncomment accounts to access the test accounts made available by the
- * Ethereum client
+  This is a testing script that must be set in the test folder after a truffle init. 
+  This script tries to test many functionallities of the smart contract voting (that should be available in the contract folder)
+   using variables of ganache for the accounts (accounts[0...9]). 
+   the operations with users will be done by a for loop to determine who as permissions  to vote or not. 
+   0 => 5 are tested with the for loop 6 is manually inserted 7 to 9 will be used to test if we can do something outside de whitelist. 
+   
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
 contract("Voting",function (accounts)  {
