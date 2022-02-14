@@ -5,8 +5,8 @@ contract Choice {
 
     mapping (address =>  uint) public usersChoice;
 
-function setChoice(uint userChoice) external{
-    usersChoice[msg.sender] = userChoice;
+function setChoice(uint _userChoice) external{
+    usersChoice[msg.sender] = _userChoice;
 
     }
 
