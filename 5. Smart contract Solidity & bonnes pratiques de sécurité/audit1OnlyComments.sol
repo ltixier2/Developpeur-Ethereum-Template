@@ -12,7 +12,7 @@ contract Crowdsale {
    // Initialization
    function Crowdsale(address _escrow) {
        owner = tx.origin;
-       // force usage of msg.sender tx.origin could be used by someone else
+       // a require that uses onlyOwner replace this. 
        // add address of the specific contract
        escrow = _escrow;
    }
